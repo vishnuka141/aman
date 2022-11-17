@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+
+<form action="" method="post">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-4">
+        </div>
+        <div class="col-4">
+            <div class="card border border- mt-4 mb-4 bg-light p-2">
+        <div class="text-center">
+            <h2 class="mt-4 text-success">Sign In</h2>
+            <div class="mt-4">
+                <input class="form-control" name="username" type="text" placeholder="Username"> 
+            </div>
+            <div class="mt-4">
+                <input class="form-control" name="password" type="password" placeholder="Password"> 
+            </div>
+            
+            
+            <div class="mt-4 mb-4"><button class="btn-sm btn-success fw-bold">Signin</button></div>
+            <p>OR</p>
+            <div class="mt-4 mb-4"><a href="{% url 'signup' %}">Singnup</a></div>
+        </div>
+            </div>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</form>
+{% endblock %}
